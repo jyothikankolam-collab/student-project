@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+    <li>
+        <a href="{% url 'students' %}" class="nav-btn">Student List</a>
+    </li>
+    <li>
+        <a href="{% url 'results' %}" class="nav-btn">Results</a>
+    </li>
+</ul>
+
+
+
+<div class="navbar">
+    Student Management System
+</div>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

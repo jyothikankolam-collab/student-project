@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Student</h2>
+<form method="post">
+{% csrf_token %}
+<input name="name" placeholder="Name"><br>
+<input name="roll" placeholder="Roll No"><br>
+<select name="course" required>
+    {% for c in courses %}
+    <option value="{{ c.id }}">{{ c.name }}</option>
+    {% endfor %}
+</select>
+
+<button>Add</button>
+</form>
+{% endblock %}

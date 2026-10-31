@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="color:rgb(104, 121, 231);">Results Of The Students</h1>
+
+<ul>
+{% for r in results %}
+<li style="color:black; font-size:20px;">
+    {{ r.student.name }} - {{ r.marks }} Marks
+</li>
+{% endfor %}
+</ul>
+{% endblock %}

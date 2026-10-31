@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Students List</h2>
+<ul>
+{% for s in students %}
+<li>{{ s.roll_no }} - {{ s.name }} ({{ s.course }})</li>
+{% endfor %}
+</ul>
+<a href="/add/">Add Student</a>
+{% endblock %}
